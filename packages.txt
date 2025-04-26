@@ -1,0 +1,2 @@
+libreoffice
+poppler-utils
