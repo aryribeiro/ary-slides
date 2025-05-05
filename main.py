@@ -19,7 +19,7 @@ def convert_pptx_to_images(pptx_file, file_id):
     except:
         return None
 
-st.set_page_config(page_title="Ary Slides!", layout="wide")
+st.set_page_config(page_title="Ary Slides!", page_icon="👨🏼‍🏫", layout="wide")
 st.title("...👨🏼‍🏫 Ary Slides! 📺")
 
 st.markdown("""
@@ -165,3 +165,35 @@ if uploaded_file:
     os.remove(tmp)
     pdf_tmp = tmp.replace(ext, ".pdf")
     if os.path.exists(pdf_tmp): os.remove(pdf_tmp)
+
+st.markdown("""
+<style>
+    .main {
+        background-color: #ffffff;
+        color: #333333;
+    }
+    .block-container {
+        padding-top: 1rem;
+        padding-bottom: 0rem;
+    }
+    /* Esconde completamente todos os elementos da barra padrão do Streamlit */
+    header {display: none !important;}
+    footer {display: none !important;}
+    #MainMenu {display: none !important;}
+    /* Remove qualquer espaço em branco adicional */
+    div[data-testid="stAppViewBlockContainer"] {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    div[data-testid="stVerticalBlock"] {
+        gap: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    /* Remove quaisquer margens extras */
+    .element-container {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+</style>
+""", unsafe_allow_html=True)
